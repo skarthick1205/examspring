@@ -5,4 +5,4 @@ copy . .
 RUN ./maven bootJar --no-daemon
 FROM openjdk:17-jdk-slim
 EXPOSE 8080
-copy --from-build /build/libs/loginspringweb-1.jar app.jar
+copy --from-java /java/karthick/loginspringweb-1.jar app.jar
