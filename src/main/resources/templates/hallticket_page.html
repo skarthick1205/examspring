@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hallticket</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin-bottom: 70px; /* To accommodate the home button at the bottom */
+        }
+
+        .hallticket {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hallticket h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .hallticket hr {
+            border-top: 2px solid #007bff;
+        }
+
+        .hallticket .info-label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .hallticket .info-value {
+            color: #333;
+        }
+
+        .hallticket .info-row {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="hallticket">
+    <h3 class="text-center">Hall Ticket</h3>
+    <hr>
+    <div class="info-row">
+        <span class="info-label">Name:</span>
+        <span class="info-value" th:text="${aname}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">DOB:</span>
+        <span class="info-value" th:text="${adob}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Gender:</span>
+        <span class="info-value" th:text="${agender}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Address:</span>
+        <span class="info-value" th:text="${aaddress}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Exam Code:</span>
+        <span class="info-value" th:text="${aexamcode}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Centre:</span>
+        <span class="info-value" th:text="${acentre}"></span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Language:</span>
+        <span class="info-value" th:text="${alanguage}"></span>
+    </div>
+    <hr>
+    <p>All the Best for your exam!</p>
+    <p>Date of Exam: 12 May 2025</p>
+    <p>Authenticated by the Exam Controller</p>
+</div>
+<a href="#" onclick="window.history.back();" class="btn btn-primary btn-block back-button">Back</a>
+<div class="home-button">
+    <a href="apply" class="btn btn-secondary">Home</a>
+</div>
+</body>
+</html>
