@@ -1,8 +1,7 @@
-FROM ubuntu:latest AS build
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
+FROM maven:4.0.0-openjdk-17 AS build
 copy . .
-RUN ./maven bootJar --no-daemon
-FROM openjdk:17-jdk-slim
+RUN mvn clean package -DskipTests
+FROM openjdk:17.0.1-jdk-slim
+copy --from=build /target/loginspringweb-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
-copy --from-main /java/karthick/loginspringweb-1.jar app.jar
+ENTRYPOINT ["java","-jar","demo.jar"]
