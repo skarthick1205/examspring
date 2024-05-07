@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            text-align: center; /* Center align text */
+            padding-top: 50px; /* Add space from top */
+        }
+
+        h1 {
+            margin-bottom: 30px; /* Add margin at bottom of h1 */
+        }
+
+        a {
+            display: inline-block; /* Display links as blocks */
+            width: 200px; /* Set width of links */
+            margin: 0 auto; /* Center align links */
+            margin-bottom: 20px; /* Add margin at bottom of links */
+            padding: 10px; /* Add padding to links */
+            background-color: #007bff; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underlines */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Icon styles */
+        .fas {
+            margin-right: 5px; /* Add margin to the right of icons */
+        }
+    </style>
+</head>
+
+<body>
+<h1>Welcome to Exam Portal</h1>
+<a href="/register"><i class="fas fa-user-plus"></i> Register</a>
+<a href="/loginn"><i class="fas fa-sign-in-alt"></i> Login</a>
+</body>
+
+<footer class="fixed-bottom bg-light text-center">
+    <div class="container">
+        <p>@Copyrights Issued ExamController</p>
+
+    </div>
+</footer>
+</html>
